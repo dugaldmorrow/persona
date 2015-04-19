@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<style>
+		</style>
+        <script data-main="app" src="lib/require.js"></script>
+	</head>
+	<body>
+		<input id="button1" type="button" value=Normal onclick="normal()"/>
+		<input id="button1" type="button" value="Smile" onclick="smile()"/>
+		<input id="button1" type="button" value="Straight Mouth" onclick="straightMouth()"/>
+		<input id="button1" type="button" value="Wink Left" onclick="winkLeft()"/>
+		<input id="button1" type="button" value="Wink Right" onclick="winkRight()"/>
+		<div id="persona">
+		</div>
+
+		
+		<script>
+		    function normal() {
+			    var personaBuilder = require('app/persona-builder');
+		        personaBuilder.reset().build('persona');
+		    }
+		    function smile() {
+			    var personaBuilder = require('app/persona-builder');
+		        personaBuilder.reset().smile().build('persona');
+		    }
+		    function straightMouth() {
+			    var personaBuilder = require('app/persona-builder');
+		        personaBuilder.reset().straightMouth().build('persona');
+		    }
+		    function winkLeft() {
+			    var personaBuilder = require('app/persona-builder');
+		        personaBuilder.reset().winkLeft().build('persona');
+		    }
+		    function winkRight() {
+			    var personaBuilder = require('app/persona-builder');
+		        personaBuilder.reset().winkRight().build('persona');
+		    }
+		</script>
+	
+	</body>
+	<script type="text/javascript" charset="utf-8">
+		
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<svg version="1.1"
+id="Layer_1"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink"
+x="0px"
+y="0px"
+width="800px"
+height="800px"
+viewBox="0 0 100 100"
+enable-background="new 0 0 100 100"
+xml:space="preserve">
+<circle fill="#FFDB9D" stroke="#000000" stroke-width="1" stroke-miterlimit="10" cx="50" cy="50" r="50"/>
+<defs>  <clipPath id="cut-off-bottom">    <rect x="22" y="40" width="16" height="8" />  </clipPath></defs><circle fill="#FFFFFF" stroke="#000000" stroke-width="1" stroke-miterlimit="10" cx="30" cy="40" r="8" clip-path="url(#cut-off-bottom)"/>
+<circle fill="#FFFFFF" stroke="#000000" stroke-width="1" stroke-miterlimit="10" cx="70" cy="40" r="8"/>
+</svg>
