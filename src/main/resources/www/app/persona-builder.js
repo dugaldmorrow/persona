@@ -38,18 +38,28 @@ define(function (svg) {
 	};
 	Eye.prototype.render = function(persona) {
 		var eyeRadius = width / 5;
+		var pupilRadius = eyeRadius / 2;
     	if (this.wink) {
         	var eyeHeightY = eyeRadius / 2;
-        	persona.ellipse(eyeRadius, eyeHeightY).fill('#ffffff').stroke('#000000').move(this.eyeCentreX - eyeRadius / 2, this.eyeCentreY - eyeHeightY / 2);
-        } else {
+        	var eyeLeftX = this.eyeCentreX - eyeRadius / 2;
+        	var eyeRightX = this.eyeCentreX + eyeRadius / 2;
+        	var eyeTopY = this.eyeCentreY - eyeRadius / 4;
+        	var path = persona.path(
+					'M ' + eyeLeftX + ' ' + this.eyeCentreY +
+					' C ' + eyeLeftX + ' ' + this.eyeCentreY + ' ' + this.eyeCentreX + ' ' + eyeTopY + ' ' + eyeRightX + ' ' + this.eyeCentreY);
+			path.fill('none').stroke({
+				width: 10
+			});
+       } else {
         	persona.circle(eyeRadius).fill('#ffffff').stroke('#000000').move(this.eyeCentreX - eyeRadius / 2, this.eyeCentreY - eyeRadius / 2);
+        	persona.circle(pupilRadius).fill('#333333').stroke('#333333').move(this.eyeCentreX - pupilRadius / 2, this.eyeCentreY - pupilRadius / 2);
         }
 	};
 	
 	// Cheek...
 	function Cheek(active, cheekCentreX) {
 		Emotion.call(this, active);
-		this.EMBARRASSED_COLOR = '#de929d';
+		this.EMBARRASSED_COLOR = '#fdc8d0';
 		this.cheekCentreX = cheekCentreX;
 		this.cheekCentreY = 25 * centreY / 20;
 		this.blushed = false;
